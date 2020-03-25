@@ -1,0 +1,43 @@
+<html>
+   <head>
+   <body>
+      <form name="calculator">
+         <table>
+            <tr>
+				<td>
+					Enter the First Number:	
+				</td>
+               <td colspan="4">
+                  <input type="text" name="display" id="number1">
+               </td>
+            </tr>
+			<tr>
+				<td>
+					Enter the Second Number:	
+				</td>
+               <td colspan="4">
+                  <input type="text" name="display" id="number2">
+               </td>
+            </tr>
+			<tr>
+				<td>
+					Result:	
+				</td>
+               <td colspan="4">
+                  <input type="text" name="display" id="result" disabled>
+               </td>
+            </tr>         
+         </table>
+		 <table>
+			<tr>              
+               <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.result.value = eval(calculator.number1.value + '+' + calculator.number2.value)"></td>
+			   <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.result.value = eval(calculator.number1.value + '-' + calculator.number2.value)"></td>
+			   <td><input type="button" class="operator" name="times" value="x" onclick="calculator.result.value = eval(calculator.number1.value + '*' + calculator.number2.value)"></td>
+			   <td><input type="button" class="operator" name="div" value="/" onclick="calculator.result.value = eval(calculator.number1.value + '/' + calculator.number2.value)"></td>
+			   <td><input type="button" id="clear" name="clear" value="Clear" onclick="calculator.number1.value = ''; calculator.number2.value = ''; calculator.result.value = ''"></td>
+            </tr>
+		</table>
+      </form>
+   </body>
+   </head>
+</html>
